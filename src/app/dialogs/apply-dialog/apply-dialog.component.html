@@ -1,0 +1,10 @@
+<div>
+  <div class='textarea'>
+    <h2>Напиши ни на кратко зошто би сакал/а да аплицираш тука:</h2>
+
+
+    <textarea rows="10" [(ngModel)]='textarea'></textarea>
+    <div><button (click)='confirm()' [class.disabled]='textarea.length == 0' class='button btn btn-success'>Потврди</button></div>
+
+  </div>
+</div>

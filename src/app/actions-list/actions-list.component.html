@@ -1,0 +1,56 @@
+<div class='search'>
+  <div class="search-text">
+    <input #searchBox id="search-text" class='search-field' (input)="search(searchBox.value)" />
+    <label for="search-text" class="form__label">Пребарувај акции</label>
+  </div>
+</div>
+
+<div class='wrapper'>
+  <div class='action-item' *ngFor='let action of actions'>
+    <div class='image'>
+      <img src='{{action.image}}'>
+    </div>
+
+    <div class='content'>
+      <h3 class='header'>{{action.header}}</h3>
+      <div class='summary'>{{action.summary}}</div>
+      <div class='read-more'><button class='btn-success btn button' [class.disabled]='!action.id' (click)='openDialog(action.id)'>Аплицирај</button></div>
+    </div>
+
+    <div class='details'>
+      <div class='detail'>
+        <span class='fw-bold'>Датум:</span>
+        <span>{{action.date | date}}</span>
+      </div>
+
+      <div class='detail'>
+        <span class='fw-bold'>Време:</span>
+        <span>{{action.time}}</span>
+      </div>
+
+
+      <div class='detail'>
+        <span class='fw-bold'>Локација:</span>
+        <span>{{action.location}}</span>
+      </div>
+
+
+      <div class='detail'>
+        <span class='fw-bold'>Организатор:</span>
+        <span>{{action.organizer}}</span>
+      </div>
+
+
+
+      <div class='detail'>
+        <span class='fw-bold'>Поени:</span>
+        <span>{{action.points}}</span>
+      </div>
+
+
+
+
+
+    </div>
+  </div>
+</div>
