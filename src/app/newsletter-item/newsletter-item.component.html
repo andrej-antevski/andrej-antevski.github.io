@@ -1,0 +1,10 @@
+<div *ngIf='newsletter'>
+  <div class='single-newsletter'>
+    <h3 class='header'>{{newsletter.header}}</h3>
+
+    <div class='image'>
+      <img src='{{newsletter.image}}'>
+    </div>
+
+    <div class='summary' [innerHTML]='newsletter.text'></div>
+  </div>

@@ -1,0 +1,15 @@
+<h2>Новости</h2>
+<div *ngFor='let newsletter of newsletters'>
+  <div class='single-newsletter'>
+    <div class='image'>
+      <img src='{{newsletter.image}}'>
+    </div>
+    <div class='content'>
+      <h3 class='header'>{{newsletter.header}}</h3>
+      <div class='summary'>{{newsletter.summary}}</div>
+      <div class='read-more'><button class='btn button btn-info' (click)='navigate(newsletter.id)'>Read More</button></div>
+    </div>
+  </div>
+</div>
+
+<div class='show-more btn button btn-success' [class.disabled]='clicked' (click) = 'showMore()'><h3>{{showMoreText}}</h3></div>

@@ -1,0 +1,15 @@
+<h2>Препорачуваме</h2>
+<div *ngFor='let action of actions'>
+  <div class='single-newsletter'>
+    <div class='image'>
+      <img src='{{action.image}}'>
+    </div>
+    <div class='content'>
+      <h3 class='header'>{{action.header}}</h3>
+      <div class='summary'>{{action.summary}}</div>
+      <div class='read-more'><button class='btn button btn-info'>Read More</button></div>
+    </div>
+  </div>
+</div>
+
+<div class='show-more btn button btn-success' [class.disabled]='clicked' (click) = 'showMore()'><h3>{{showMoreText}}</h3></div>
