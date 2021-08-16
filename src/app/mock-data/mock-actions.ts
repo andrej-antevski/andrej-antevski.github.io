@@ -13,7 +13,12 @@ export const _ACTIONS: Action[] = [
     time: '13:30-15:30',
     date: new Date(),
     location: 'Skopje',
-    organizer: 'Grad Skopje'
+    organizer: 'Grad Skopje',
+    pending: [
+      {name: 'Stole', reason: 'zatoj'},
+      {name: 'Stojadin', reason: 'zatoj'},
+      {name: 'Mario', reason: 'zatoj'}
+      ]
   },
   {
     id: 2,
@@ -27,7 +32,12 @@ export const _ACTIONS: Action[] = [
     time: '13:30-15:30',
     date: new Date(),
     location: 'Skopje',
-    organizer: 'Grad Skopje'
+    organizer: 'Grad Skopje',
+    pending: [
+      {name: 'Stole', reason: 'zatoj'},
+      {name: 'Stojadin', reason: 'zatoj'},
+      {name: 'Mario', reason: 'zatoj'}
+    ]
   },
   {
     id: 3,
@@ -41,7 +51,12 @@ export const _ACTIONS: Action[] = [
     time: '13:30-15:30',
     date: new Date(),
     location: 'Skopje',
-    organizer: 'Grad Skopje'
+    organizer: 'Grad Skopje',
+    pending: [
+      {name: 'Stole', reason: 'zatoj'},
+      {name: 'Stojadin', reason: 'zatoj'},
+      {name: 'Mario', reason: 'zatoj'}
+    ]
   },
   {
     id: 4,
@@ -55,6 +70,11 @@ export const _ACTIONS: Action[] = [
     time: '13:30-15:30',
     date: new Date(),
     location: 'Skopje',
-    organizer: 'Grad Skopje'
+    organizer: 'Grad Skopje',
+    pending: [
+      {name: 'Stole', reason: 'zatoj'},
+      {name: 'Stojadin', reason: 'zatoj'},
+      {name: 'Mario', reason: 'zatoj'}
+    ]
   }
 ];

@@ -1,0 +1,13 @@
+.buttons{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 100%;
+  min-width: 100%;
+}
+
+.applicants{
+  margin-bottom: 15px;
+  background: #4d4d4d;
+  padding: 15px;
+  border-radius: 5px;
+}

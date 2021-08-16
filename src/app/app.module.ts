@@ -17,6 +17,7 @@ import {MatInputModule} from '@angular/material/input';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatSelectModule} from '@angular/material/select';
 import { ActionItemComponent } from './action-item/action-item.component';
+import { ApplicantsDialogComponent } from './dialogs/applicants/applicants-dialog.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ActionItemComponent } from './action-item/action-item.component';
     NewsletterItemComponent,
     ActionsListComponent,
     ApplyDialogComponent,
-    ActionItemComponent
+    ActionItemComponent,
+    ApplicantsDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +44,6 @@ import { ActionItemComponent } from './action-item/action-item.component';
   exports: [MatFormFieldModule, MatInputModule, MatSelectModule],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [ApplyDialogComponent]
+  entryComponents: [ApplyDialogComponent, ApplicantsDialogComponent]
 })
 export class AppModule { }

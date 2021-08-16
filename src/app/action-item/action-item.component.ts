@@ -5,6 +5,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {FormGroup} from '@angular/forms';
 import {MatDialog} from '@angular/material/dialog';
 import {ApplyDialogComponent} from '../dialogs/apply-dialog/apply-dialog.component';
+import {ApplicantsDialogComponent} from '../dialogs/applicants/applicants-dialog.component';
 
 @Component({
   selector: 'app-action-item',
@@ -26,6 +27,27 @@ export class ActionItemComponent implements OnInit {
     this.route.params.subscribe(map => this.action = this.actions.find(ac => ac.id === +map.id));
   }
 
+  openApplicants(): void {
+    const dialogRef = this.dialog.open(ApplicantsDialogComponent, {
+      width: '800px',
+      height: '1000px',
+      data: {
+        current: this.action.applicants,
+        applications: this.action.pending.filter(pending => !this.action.applicants.includes(pending.name))
+      }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result){
+        if (result.includes('deny')) {
+          this.action.pending = this.action.pending.filter(pending => pending.name !== result.substring(0, result.length - 4));
+        }
+        else {
+          this.action.applicants = this.action.applicants.concat(result);
+        }
+      }
+    });
+  }
   openDialog(id): void {
     const dialogRef = this.dialog.open(ApplyDialogComponent, {
       width: '800px',

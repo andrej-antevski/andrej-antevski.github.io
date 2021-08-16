@@ -11,4 +11,10 @@ export interface Action{
   location: string;
   organizer: string;
   image: string;
+  pending: Applicant[];
+}
+
+export interface Applicant {
+  name: string;
+  reason: string;
 }

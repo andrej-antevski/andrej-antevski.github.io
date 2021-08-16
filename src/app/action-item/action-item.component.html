@@ -39,14 +39,16 @@
       </div>
       <div class='members'>
         <h3>Членови</h3>
-        <a href='mailto:teset@test.com' *ngFor='let applicant of action.applicants'>{{applicant}}</a>
+        <ul>
+          <li *ngFor='let applicant of action.applicants'><a href='mailto:teset@test.com'>{{applicant}}</a></li>
+        </ul>
       </div>
     </div>
   </div>
 
   <div class='chat'>
     <div class='apply'>
-      <button class='btn btn-info button'>Апликации</button>
+      <button class='btn btn-info button' (click)='openApplicants()'>Апликации</button>
       <button class='btn btn-danger button' (click)='openDialog(3)'>Откажи се од акцијата</button>
     </div>
     <div class='chat-box'>

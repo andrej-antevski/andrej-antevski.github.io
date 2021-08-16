@@ -1,0 +1,8 @@
+<div class='applicants' *ngFor="let app of data.applications">
+  <div class='name'><h4>Име: {{app.name}}</h4></div>
+  <div class='reason'><h4>Причина: {{app.reason}}</h4></div>
+  <div class='buttons'>
+    <button class='btn button btn-success' (click)="confirm(app.name)">Потврди</button>
+    <button class='btn button btn-danger' (click)="deny(app.name)">Одби</button>
+  </div>
+</div>
