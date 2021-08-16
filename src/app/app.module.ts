@@ -16,6 +16,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatSelectModule} from '@angular/material/select';
+import { ActionItemComponent } from './action-item/action-item.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {MatSelectModule} from '@angular/material/select';
     FeaturedListComponent,
     NewsletterItemComponent,
     ActionsListComponent,
-    ApplyDialogComponent
+    ApplyDialogComponent,
+    ActionItemComponent
   ],
   imports: [
     BrowserModule,

@@ -22,7 +22,10 @@ export class ActionsListComponent implements OnInit {
     const dialogRef = this.dialog.open(ApplyDialogComponent, {
       width: '800px',
       height: '350px',
-      data: {id}
+      data: {
+        id,
+        message: 'Напиши ни на кратко зошто би сакал/а да аплицираш тука:'
+      }
     });
 
     dialogRef.afterClosed().subscribe(result => {

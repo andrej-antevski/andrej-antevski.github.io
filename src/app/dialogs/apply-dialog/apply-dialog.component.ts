@@ -26,4 +26,5 @@ export class ApplyDialogComponent implements OnInit {
 
 interface DialogData {
   id: number;
+  message: string;
 }

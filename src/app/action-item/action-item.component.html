@@ -1,0 +1,62 @@
+<div class='main'>
+  <div class='details'>
+    <div class='name'>
+      <h1>{{action.header}}</h1>
+    </div>
+    <div class='description'>
+      <img src='{{action.image}}' alt='cover_image'>
+      <p class='text'>{{action.text}}</p>
+    </div>
+    <div class='inforamtion'>
+      <div class='info'>
+        <h3>Детали</h3>
+        <div class='detail'>
+          <span class='fw-bold'>Датум:</span>
+          <span>{{action.date | date}}</span>
+        </div>
+
+        <div class='detail'>
+          <span class='fw-bold'>Време:</span>
+          <span>{{action.time}}</span>
+        </div>
+
+
+        <div class='detail'>
+          <span class='fw-bold'>Локација:</span>
+          <span>{{action.location}}</span>
+        </div>
+
+
+        <div class='detail'>
+          <span class='fw-bold'>Организатор:</span>
+          <span>{{action.organizer}}</span>
+        </div>
+
+        <div class='detail'>
+          <span class='fw-bold'>Поени:</span>
+          <span>{{action.points}}</span>
+        </div>
+      </div>
+      <div class='members'>
+        <h3>Членови</h3>
+        <a href='mailto:teset@test.com' *ngFor='let applicant of action.applicants'>{{applicant}}</a>
+      </div>
+    </div>
+  </div>
+
+  <div class='chat'>
+    <div class='apply'>
+      <button class='btn btn-info button'>Апликации</button>
+      <button class='btn btn-danger button' (click)='openDialog(3)'>Откажи се од акцијата</button>
+    </div>
+    <div class='chat-box'>
+      <div class='chats'>
+        <p *ngFor='let chat of action.chat'>{{chat}}</p>
+        <p class='my-chat' *ngFor='let msg of messages'>Јас: {{msg}}</p>
+      </div>
+      <form (ngSubmit)="onEnter()" #form="ngForm">
+        <input placeholder='Напиши порака' type="text" #inputElement>
+      </form>
+    </div>
+  </div>
+</div>
