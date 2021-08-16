@@ -12,7 +12,7 @@ import {debounceTime, distinctUntilChanged, switchMap} from 'rxjs/operators';
 })
 export class ActionsListComponent implements OnInit {
 
-  actions = _ACTIONS;
+  actions = _ACTIONS.filter(action => action.id !== 4);
 
   private searchTerms = new Subject<string>();
 

@@ -17,6 +17,8 @@ export class ActionItemComponent implements OnInit {
   actions = _ACTIONS;
   action: Action;
   messages: string[] = [];
+  disable = false;
+  adminView = true;
 
   @ViewChild('inputElement') inputName;
   constructor(private route: ActivatedRoute,
@@ -25,6 +27,7 @@ export class ActionItemComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe(map => this.action = this.actions.find(ac => ac.id === +map.id));
+    if(this.action.id === 4) { this.disable = true; }
   }
 
   openApplicants(): void {

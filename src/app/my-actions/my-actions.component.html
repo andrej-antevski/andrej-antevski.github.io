@@ -1,0 +1,120 @@
+<h1 class='header'>Мои Акции</h1>
+<div class='wrapper'>
+  <div class='pending'>
+    <h1>Чекам Одговор</h1>
+    <div class='action-item' *ngFor='let action of pending'>
+      <div class='content'>
+        <h2 class='header-action' (click)='openAction(action.id)'>{{action.header}}</h2>
+        <div class='summary'>{{action.summary}}</div>
+      </div>
+
+      <div class='details'>
+        <div class='detail'>
+          <span class='fw-bold'>Датум:</span>
+          <span class='it'>{{action.date | date}}</span>
+        </div>
+
+        <div class='detail'>
+          <span class='fw-bold'>Време:</span>
+          <span class='it'>{{action.time}}</span>
+        </div>
+
+        <div class='detail'>
+          <span class='fw-bold'>Локација:</span>
+          <span class='it'>{{action.location}}</span>
+        </div>
+
+        <div class='detail'>
+          <span class='fw-bold'>Организатор:</span>
+          <span class='it'>{{action.organizer}}</span>
+        </div>
+
+
+        <div class='detail'>
+          <span class='fw-bold'>Поени:</span>
+          <span class='it'>{{action.points}}</span>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <div class='accepted'>
+    <h1>Акции на кои сум член</h1>
+
+    <div class='action-item' *ngFor='let action of accepted'>
+      <div class='content'>
+        <h2 class='header-action' (click)='openAction(action.id)'>{{action.header}}</h2>
+        <div class='summary'>{{action.summary}}</div>
+      </div>
+
+      <div class='details'>
+        <div class='detail'>
+          <span class='fw-bold'>Датум:</span>
+          <span class='it'>{{action.date | date}}</span>
+        </div>
+
+        <div class='detail'>
+          <span class='fw-bold'>Време:</span>
+          <span class='it'>{{action.time}}</span>
+        </div>
+
+        <div class='detail'>
+          <span class='fw-bold'>Локација:</span>
+          <span class='it'>{{action.location}}</span>
+        </div>
+
+        <div class='detail'>
+          <span class='fw-bold'>Организатор:</span>
+          <span class='it'>{{action.organizer}}</span>
+        </div>
+
+
+        <div class='detail'>
+          <span class='fw-bold'>Поени:</span>
+          <span class='it'>{{action.points}}</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class='done'>
+    <h1>Завршени акции</h1>
+
+    <div class='action-item' *ngFor='let action of done'>
+      <div class='content'>
+        <h2 class='header-action' (click)='openAction(action.id)'>{{action.header}}</h2>
+        <div class='summary'>{{action.summary}}</div>
+      </div>
+
+      <div class='details'>
+        <div class='detail'>
+          <span class='fw-bold'>Датум:</span>
+          <span class='it'>{{action.date | date}}</span>
+        </div>
+
+        <div class='detail'>
+          <span class='fw-bold'>Време:</span>
+          <span class='it'>{{action.time}}</span>
+        </div>
+
+        <div class='detail'>
+          <span class='fw-bold'>Локација:</span>
+          <span class='it'>{{action.location}}</span>
+        </div>
+
+        <div class='detail'>
+          <span class='fw-bold'>Организатор:</span>
+          <span class='it'>{{action.organizer}}</span>
+        </div>
+
+
+        <div class='detail'>
+          <span class='fw-bold'>Поени:</span>
+          <span class='it'>{{action.points}}</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

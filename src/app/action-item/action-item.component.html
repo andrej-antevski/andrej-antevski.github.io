@@ -1,3 +1,6 @@
+<mat-checkbox class="example-margin" color="" [(ngModel)]="adminView">Админ на акцијата</mat-checkbox>
+
+
 <div class='main'>
   <div class='details'>
     <div class='name'>
@@ -48,8 +51,8 @@
 
   <div class='chat'>
     <div class='apply'>
-      <button class='btn btn-info button' (click)='openApplicants()'>Апликации</button>
-      <button class='btn btn-danger button' (click)='openDialog(3)'>Откажи се од акцијата</button>
+      <button class='btn btn-info button' (click)='openApplicants()' [class.disabled]='disable || !adminView'>Апликации</button>
+      <button class='btn btn-danger button' (click)='openDialog(3)' [class.disabled]='disable'>Откажи се од акцијата</button>
     </div>
     <div class='chat-box'>
       <div class='chats'>

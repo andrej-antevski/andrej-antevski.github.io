@@ -18,6 +18,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatSelectModule} from '@angular/material/select';
 import { ActionItemComponent } from './action-item/action-item.component';
 import { ApplicantsDialogComponent } from './dialogs/applicants/applicants-dialog.component';
+import { MyActionsComponent } from './my-actions/my-actions.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { ApplicantsDialogComponent } from './dialogs/applicants/applicants-dialo
     ActionsListComponent,
     ApplyDialogComponent,
     ActionItemComponent,
-    ApplicantsDialogComponent
+    ApplicantsDialogComponent,
+    MyActionsComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +43,8 @@ import { ApplicantsDialogComponent } from './dialogs/applicants/applicants-dialo
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
+    BrowserModule,
+    MatCheckboxModule
   ],
   exports: [MatFormFieldModule, MatInputModule, MatSelectModule],
   providers: [],

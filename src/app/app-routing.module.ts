@@ -4,6 +4,7 @@ import {HomePageComponent} from './home-page/home-page.component';
 import {NewsletterItemComponent} from './newsletter-item/newsletter-item.component';
 import {ActionsListComponent} from './actions-list/actions-list.component';
 import {ActionItemComponent} from './action-item/action-item.component';
+import {MyActionsComponent} from './my-actions/my-actions.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'action/:id',
     component: ActionItemComponent
+  },
+  {
+    path: 'my-actions',
+    component: MyActionsComponent
   }
 ];
 
