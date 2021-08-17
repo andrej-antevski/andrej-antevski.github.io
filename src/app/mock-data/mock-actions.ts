@@ -15,9 +15,9 @@ export const _ACTIONS: Action[] = [
     location: 'Skopje',
     organizer: 'Grad Skopje',
     pending: [
-      {name: 'Stole', reason: 'zatoj'},
-      {name: 'Stojadin', reason: 'zatoj'},
-      {name: 'Mario', reason: 'zatoj'}
+      {name: 'Filip Filipovski', reason: 'Сакам да помагам'},
+      {name: 'Mario Mariovski', reason: 'Ме исполнува'},
+      {name: 'Trajce Trajcevski', reason: 'Сакам да пробам нешто ново'}
       ]
   },
   {
@@ -34,9 +34,9 @@ export const _ACTIONS: Action[] = [
     location: 'Skopje',
     organizer: 'Grad Skopje',
     pending: [
-      {name: 'Stole', reason: 'zatoj'},
-      {name: 'Stojadin', reason: 'zatoj'},
-      {name: 'Mario', reason: 'zatoj'}
+      {name: 'Filip Filipovski', reason: 'Сакам да помагам'},
+      {name: 'Mario Mariovski', reason: 'Ме исполнува'},
+      {name: 'Trajce Trajcevski', reason: 'Сакам да пробам нешто ново'}
     ]
   },
   {
@@ -53,9 +53,9 @@ export const _ACTIONS: Action[] = [
     location: 'Skopje',
     organizer: 'Grad Skopje',
     pending: [
-      {name: 'Stole', reason: 'zatoj'},
-      {name: 'Stojadin', reason: 'zatoj'},
-      {name: 'Mario', reason: 'zatoj'}
+      {name: 'Filip Filipovski', reason: 'Сакам да помагам'},
+      {name: 'Mario Mariovski', reason: 'Ме исполнува'},
+      {name: 'Trajce Trajcevski', reason: 'Сакам да пробам нешто ново'}
     ]
   },
   {
@@ -72,9 +72,9 @@ export const _ACTIONS: Action[] = [
     location: 'Skopje',
     organizer: 'Grad Skopje',
     pending: [
-      {name: 'Stole', reason: 'zatoj'},
-      {name: 'Stojadin', reason: 'zatoj'},
-      {name: 'Mario', reason: 'zatoj'}
+      {name: 'Filip Filipovski', reason: 'Сакам да помагам'},
+      {name: 'Mario Mariovski', reason: 'Ме исполнува'},
+      {name: 'Trajce Trajcevski', reason: 'Сакам да пробам нешто ново'}
     ]
   }
 ];
