@@ -5,8 +5,13 @@ import {NewsletterItemComponent} from './newsletter-item/newsletter-item.compone
 import {ActionsListComponent} from './actions-list/actions-list.component';
 import {ActionItemComponent} from './action-item/action-item.component';
 import {MyActionsComponent} from './my-actions/my-actions.component';
+import {CreateActionComponent} from './create-action/create-action.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    component: HomePageComponent
+  },
   {
     path: 'home',
     component: HomePageComponent
@@ -26,6 +31,10 @@ const routes: Routes = [
   {
     path: 'my-actions',
     component: MyActionsComponent
+  },
+  {
+    path: 'create-action',
+    component: CreateActionComponent
   }
 ];
 

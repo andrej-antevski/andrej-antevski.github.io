@@ -1,0 +1,47 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+  <div class="form-group">
+    <label for="name">Име на акцијата</label>
+    <input type="text" class="form-control" id="name" formControlName="header" matInput>
+  </div>
+
+  <div class="form-group">
+    <label for="summary">Краток опис</label>
+    <textarea type="text" class="form-control" id="summary" formControlName="summary" matInput></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="detail">Детален Опис</label>
+    <textarea type="text" class="form-control" id="detail" formControlName="text" matInput></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="location">Локација</label>
+    <input type="text" class="form-control" id="location" formControlName="location" matInput>
+  </div>
+
+  <div class="form-group">
+    <label for="organizer">Организација</label>
+    <input type="text" class="form-control" id="organizer" formControlName="organizer" matInput>
+  </div>
+
+  <div class="form-group">
+    <label for="points">Поени</label>
+    <input type="number" [min]="1" class="form-control" id="points" formControlName="points" matInput>
+  </div>
+
+  <div class="form-group">
+    <label for="date">Датум</label>
+    <input class="form-control" id='date' placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #d="ngbDatepicker" matInput formControlName='date' readonly>
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary calendar" type='button' (click)="d.toggle()">Избери Датум</button>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="time">Време</label>
+    <input type="text" class="form-control" id="time" formControlName="time" matInput>
+  </div>
+
+  <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Потврди</button>
+</form>

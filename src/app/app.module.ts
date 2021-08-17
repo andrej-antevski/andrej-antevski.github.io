@@ -20,6 +20,11 @@ import { ActionItemComponent } from './action-item/action-item.component';
 import { ApplicantsDialogComponent } from './dialogs/applicants/applicants-dialog.component';
 import { MyActionsComponent } from './my-actions/my-actions.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { CreateActionComponent } from './create-action/create-action.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatButtonModule} from '@angular/material/button';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 @NgModule({
   declarations: [
@@ -33,7 +38,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     ApplyDialogComponent,
     ActionItemComponent,
     ApplicantsDialogComponent,
-    MyActionsComponent
+    MyActionsComponent,
+    CreateActionComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +50,14 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     FormsModule,
     ReactiveFormsModule,
     BrowserModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    NgbModule
   ],
   exports: [MatFormFieldModule, MatInputModule, MatSelectModule],
   providers: [],
