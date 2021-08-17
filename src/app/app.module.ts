@@ -25,6 +25,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatButtonModule} from '@angular/material/button';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { PointsDialogComponent } from './dialogs/points-dialog/points-dialog.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     ActionItemComponent,
     ApplicantsDialogComponent,
     MyActionsComponent,
-    CreateActionComponent
+    CreateActionComponent,
+    PointsDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +59,7 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     MatInputModule,
     MatButtonModule,
     MatButtonToggleModule,
-    NgbModule
+
   ],
   exports: [MatFormFieldModule, MatInputModule, MatSelectModule],
   providers: [],

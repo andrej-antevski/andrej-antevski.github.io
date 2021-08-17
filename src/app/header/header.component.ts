@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import {Router} from '@angular/router';
+import {MatDialog, MatDialogRef} from '@angular/material/dialog';
+import {PointsDialogComponent} from '../dialogs/points-dialog/points-dialog.component';
 
 @Component({
   selector: 'app-header',
@@ -8,10 +10,15 @@ import {Router} from '@angular/router';
 })
 export class HeaderComponent {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+              private dialog: MatDialog) { }
 
 
   navigate(where): void {
     this.router.navigate([where]);
+  }
+
+  openDialog(): void{
+    this.dialog.open(PointsDialogComponent);
   }
 }
