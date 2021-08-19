@@ -17,4 +17,5 @@ export interface Action{
 export interface Applicant {
   name: string;
   reason: string;
+  points: number;
 }

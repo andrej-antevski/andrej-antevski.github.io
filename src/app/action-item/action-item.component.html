@@ -51,7 +51,7 @@
 
   <div class='chat'>
     <div class='apply'>
-      <button class='btn btn-info button' (click)='openApplicants()' [class.disabled]='disable || !adminView'>Апликации</button>
+      <button class='btn btn-info button' (click)='openApplicants()' [class.disabled]='disable || !adminView || action.pending.length == 0'>Апликации</button>
       <button class='btn btn-danger button' (click)='openDialog(3)' [class.disabled]='disable'>Откажи се од акцијата</button>
     </div>
     <div class='chat-box'>

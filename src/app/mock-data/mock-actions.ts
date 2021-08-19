@@ -15,9 +15,9 @@ export const _ACTIONS: Action[] = [
     location: 'Skopje',
     organizer: 'Grad Skopje',
     pending: [
-      {name: 'Filip Filipovski', reason: 'Сакам да помагам'},
-      {name: 'Mario Mariovski', reason: 'Ме исполнува'},
-      {name: 'Trajce Trajcevski', reason: 'Сакам да пробам нешто ново'}
+      {name: 'Filip Filipovski', reason: 'Сакам да помагам', points: 3},
+      {name: 'Mario Mariovski', reason: 'Ме исполнува', points: 90},
+      {name: 'Trajce Trajcevski', reason: 'Сакам да пробам нешто ново', points: -3}
       ]
   },
   {
@@ -34,9 +34,9 @@ export const _ACTIONS: Action[] = [
     location: 'Skopje',
     organizer: 'Grad Skopje',
     pending: [
-      {name: 'Filip Filipovski', reason: 'Сакам да помагам'},
-      {name: 'Mario Mariovski', reason: 'Ме исполнува'},
-      {name: 'Trajce Trajcevski', reason: 'Сакам да пробам нешто ново'}
+      {name: 'Filip Filipovski', reason: 'Сакам да помагам', points: 2},
+      {name: 'Mario Mariovski', reason: 'Ме исполнува', points: 53},
+      {name: 'Trajce Trajcevski', reason: 'Сакам да пробам нешто ново', points: 3}
     ]
   },
   {
@@ -53,9 +53,9 @@ export const _ACTIONS: Action[] = [
     location: 'Skopje',
     organizer: 'Grad Skopje',
     pending: [
-      {name: 'Filip Filipovski', reason: 'Сакам да помагам'},
-      {name: 'Mario Mariovski', reason: 'Ме исполнува'},
-      {name: 'Trajce Trajcevski', reason: 'Сакам да пробам нешто ново'}
+      {name: 'Filip Filipovski', reason: 'Сакам да помагам', points: 12},
+      {name: 'Mario Mariovski', reason: 'Ме исполнува', points: 4},
+      {name: 'Trajce Trajcevski', reason: 'Сакам да пробам нешто ново', points: 0}
     ]
   },
   {
@@ -72,9 +72,9 @@ export const _ACTIONS: Action[] = [
     location: 'Skopje',
     organizer: 'Grad Skopje',
     pending: [
-      {name: 'Filip Filipovski', reason: 'Сакам да помагам'},
-      {name: 'Mario Mariovski', reason: 'Ме исполнува'},
-      {name: 'Trajce Trajcevski', reason: 'Сакам да пробам нешто ново'}
+      {name: 'Filip Filipovski', reason: 'Сакам да помагам', points: 5},
+      {name: 'Mario Mariovski', reason: 'Ме исполнува', points: 35},
+      {name: 'Trajce Trajcevski', reason: 'Сакам да пробам нешто ново', points: 53}
     ]
   }
 ];

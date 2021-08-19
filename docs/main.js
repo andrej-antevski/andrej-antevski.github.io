@@ -77,9 +77,9 @@ const _ACTIONS = [
         location: 'Skopje',
         organizer: 'Grad Skopje',
         pending: [
-            { name: 'Filip Filipovski', reason: 'Сакам да помагам' },
-            { name: 'Mario Mariovski', reason: 'Ме исполнува' },
-            { name: 'Trajce Trajcevski', reason: 'Сакам да пробам нешто ново' }
+            { name: 'Filip Filipovski', reason: 'Сакам да помагам', points: 3 },
+            { name: 'Mario Mariovski', reason: 'Ме исполнува', points: 90 },
+            { name: 'Trajce Trajcevski', reason: 'Сакам да пробам нешто ново', points: -3 }
         ]
     },
     {
@@ -96,9 +96,9 @@ const _ACTIONS = [
         location: 'Skopje',
         organizer: 'Grad Skopje',
         pending: [
-            { name: 'Filip Filipovski', reason: 'Сакам да помагам' },
-            { name: 'Mario Mariovski', reason: 'Ме исполнува' },
-            { name: 'Trajce Trajcevski', reason: 'Сакам да пробам нешто ново' }
+            { name: 'Filip Filipovski', reason: 'Сакам да помагам', points: 2 },
+            { name: 'Mario Mariovski', reason: 'Ме исполнува', points: 53 },
+            { name: 'Trajce Trajcevski', reason: 'Сакам да пробам нешто ново', points: 3 }
         ]
     },
     {
@@ -115,9 +115,9 @@ const _ACTIONS = [
         location: 'Skopje',
         organizer: 'Grad Skopje',
         pending: [
-            { name: 'Filip Filipovski', reason: 'Сакам да помагам' },
-            { name: 'Mario Mariovski', reason: 'Ме исполнува' },
-            { name: 'Trajce Trajcevski', reason: 'Сакам да пробам нешто ново' }
+            { name: 'Filip Filipovski', reason: 'Сакам да помагам', points: 12 },
+            { name: 'Mario Mariovski', reason: 'Ме исполнува', points: 4 },
+            { name: 'Trajce Trajcevski', reason: 'Сакам да пробам нешто ново', points: 0 }
         ]
     },
     {
@@ -134,9 +134,9 @@ const _ACTIONS = [
         location: 'Skopje',
         organizer: 'Grad Skopje',
         pending: [
-            { name: 'Filip Filipovski', reason: 'Сакам да помагам' },
-            { name: 'Mario Mariovski', reason: 'Ме исполнува' },
-            { name: 'Trajce Trajcevski', reason: 'Сакам да пробам нешто ново' }
+            { name: 'Filip Filipovski', reason: 'Сакам да помагам', points: 5 },
+            { name: 'Mario Mariovski', reason: 'Ме исполнува', points: 35 },
+            { name: 'Trajce Trajcevski', reason: 'Сакам да пробам нешто ново', points: 53 }
         ]
     }
 ];
@@ -385,7 +385,7 @@ ActionItemComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefi
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.action.applicants);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("disabled", ctx.disable || !ctx.adminView);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("disabled", ctx.disable || !ctx.adminView || ctx.action.pending.length == 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("disabled", ctx.disable);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
@@ -931,7 +931,7 @@ function ApplicantsDialogComponent_div_0_Template(rf, ctx) { if (rf & 1) {
 } if (rf & 2) {
     const app_r1 = ctx.$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("\u0418\u043C\u0435: ", app_r1.name, "");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"]("\u0418\u043C\u0435: ", app_r1.name, ", ", app_r1.points, "V \u041F\u043E\u0435\u043D\u0438");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("\u041F\u0440\u0438\u0447\u0438\u043D\u0430: ", app_r1.reason, "");
 } }
@@ -951,7 +951,7 @@ class ApplicantsDialogComponent {
 }
 ApplicantsDialogComponent.ɵfac = function ApplicantsDialogComponent_Factory(t) { return new (t || ApplicantsDialogComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MAT_DIALOG_DATA"])); };
 ApplicantsDialogComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ApplicantsDialogComponent, selectors: [["app-applicants"]], decls: 1, vars: 1, consts: [["class", "applicants", 4, "ngFor", "ngForOf"], [1, "applicants"], [1, "name"], [1, "reason"], [1, "buttons"], [1, "btn", "button", "btn-success", 3, "click"], [1, "btn", "button", "btn-danger", 3, "click"]], template: function ApplicantsDialogComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, ApplicantsDialogComponent_div_0_Template, 12, 2, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, ApplicantsDialogComponent_div_0_Template, 12, 3, "div", 0);
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.data.applications);
     } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"]], styles: [".buttons[_ngcontent-%COMP%] {\n  display: grid;\n  grid-template-columns: 50% 50%;\n  width: 100%;\n  min-width: 100%;\n}\n\n.applicants[_ngcontent-%COMP%] {\n  margin-bottom: 15px;\n  background: #4d4d4d;\n  padding: 15px;\n  border-radius: 5px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZGlhbG9ncy9hcHBsaWNhbnRzL2FwcGxpY2FudHMtZGlhbG9nLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBQTtFQUNBLDhCQUFBO0VBQ0EsV0FBQTtFQUNBLGVBQUE7QUFDRjs7QUFFQTtFQUNFLG1CQUFBO0VBQ0EsbUJBQUE7RUFDQSxhQUFBO0VBQ0Esa0JBQUE7QUFDRiIsImZpbGUiOiJzcmMvYXBwL2RpYWxvZ3MvYXBwbGljYW50cy9hcHBsaWNhbnRzLWRpYWxvZy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5idXR0b25ze1xyXG4gIGRpc3BsYXk6IGdyaWQ7XHJcbiAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiA1MCUgNTAlO1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIG1pbi13aWR0aDogMTAwJTtcclxufVxyXG5cclxuLmFwcGxpY2FudHN7XHJcbiAgbWFyZ2luLWJvdHRvbTogMTVweDtcclxuICBiYWNrZ3JvdW5kOiAjNGQ0ZDRkO1xyXG4gIHBhZGRpbmc6IDE1cHg7XHJcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xyXG59XHJcbiJdfQ== */"] });
